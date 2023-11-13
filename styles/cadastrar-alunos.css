@@ -1,0 +1,312 @@
+.tabular--wrapper {
+  background-color: #fff;
+  margin-top: 1rem;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.table-container {
+  width: 100%;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #102447;
+  color: #e7b315;
+}
+
+th {
+  padding: 15px;
+  text-align: left;
+}
+tbody {
+  background-color: #f2f2f2;
+}
+td {
+  padding: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #fff;
+}
+
+tfoot {
+  background-color: #102447;
+  font-weight: bold;
+  color: #e7b315;
+}
+tfoot td {
+  background-color: #102447;
+  font-weight: bold;
+  color: #e7b315;
+}
+
+.table-container button {
+  color: black;
+  background: none;
+  cursor: pointer;
+}
+
+td.status-ativo {
+  color: black; /* Define a cor do texto como verde */
+}
+td.status-ativo span {
+  padding: 2px 12px;
+  background-color: rgba(144, 245, 156, 0.8);
+  border-radius: 28px;
+  border: solid 1px green;
+}
+
+/* Estilo para "Inativo" */
+td.status-inativo {
+  color: black; /* Define a cor do texto como vermelho */
+}
+
+td.status-inativo span {
+  background-color: rgba(188, 57, 43, 0.8);
+  border-radius: 28px;
+  padding: 2px 12px;
+  border: solid 1px red;
+}
+
+.btn-cadastrar {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #ffb606;
+  color: black;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.btn-cadastrar i {
+  margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
+
+.btn-cadastrar:hover {
+  background: #b9891a;
+  color: black;
+}
+
+/* *******************FORMULARIO DE CADASTRO DO ALUNO*************** */
+
+.card {
+  
+    width: 100%;
+    padding: 20px;
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+}
+
+.card h2 {
+  font-size: 24px;
+}
+
+.form-group {
+  margin: 10px 0;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-weight: 400;
+  border: none;
+  font-size: 17px;
+  color: #323232;
+  background-color: #ecf2f2f7;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background: #ffb606;
+  color: black;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+  background: #b9891a;
+  color: black;
+}
+
+.voltar-link {
+  
+  border-radius: 5px;
+  font-weight: bold;
+
+   margin-left: -81%;
+}
+
+td button {
+ 
+  border: none;
+  padding: 5px 9px; 
+  cursor: pointer;
+  border-radius: 5px; 
+}
+
+
+td button i {
+  margin-right: 5px; 
+}
+
+/* Estilo hover */
+td button:hover {
+  background-color:#ffb606; 
+}
+
+
+.action{
+  text-align: center;
+}
+
+.span-required{
+  margin: 3px 0 0 1px;
+  color:  #e6363660;
+font-size: 12px;
+ display: none;
+}
+
+
+/* ******************STEPS*************** */
+
+.form-step {
+  display: none;
+  transform-origin: top ;
+  animation: animate 0.5s;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+.form-step-active{
+  display: block;
+}
+.btn-cadastrar:hover {
+  background: #b9891a;
+  color: black;
+}
+.progress-content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-between ;
+}
+
+.progress-bar{
+  padding: 30px 34%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  counter-reset: step;
+}
+.progress-bar::before, .progress{
+  content: "";
+  background-color: rgb(237, 229, 229);;
+  top: 47%;
+  left: 51%;
+  position: absolute;
+  transform: translate(-50%);
+  height: 4px;
+  width: 30%;
+}
+
+.progress{
+
+  width: 0%;
+}
+.progress-step{
+  border: solid 4px;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  color: rgb(237, 229, 229);
+  font-weight: 500;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress-step::before{
+
+ counter-increment: step;
+ content: counter(step);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.progress-step-active{
+  background-color: #ffffff;
+  color: #b9891a;
+}
+.progress-step::after{
+  content: attr(data-title);
+  position: absolute;
+  top: 80%;
+
+  font-size:0.85rem;
+}
+.btn-next, .btn-prev {
+  font-size: 19px;
+  margin-left: 14px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 17%;
+  background: #e7b315;
+  color: black;
+  border: none;
+  padding: 13px 24px;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.btn-next:hover{
+  
+  background:#b9891a;
+  color: white;
+ 
+}
+.btn-prev:hover{
+  
+  background:#b9891a;
+  color: white;
+ 
+}

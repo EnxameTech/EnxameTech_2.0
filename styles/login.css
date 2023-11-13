@@ -1,0 +1,125 @@
+.container-login {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.img-box {
+  width: 50%;
+  height: 100vh;
+}
+
+.img-box img {
+  width: 50vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.content-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.content-box .form-box {
+  width: 50%;
+}
+.content-box .form-box .ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-box .form-box .ul li {
+  list-style: none;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0 7px;
+  cursor: pointer;
+  transform: 0.5s;
+}
+.content-box .form-box .ul li:hover {
+  background-color: #e4e4e4e4;
+}
+
+.form-box .form-box .ul li {
+  width: 40px;
+}
+.input-box {
+  margin-bottom: 18px;
+}
+
+.content-box .form-box h2 {
+  color: black;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.content-box .form-box h2 {
+  margin-bottom: 20px;
+}
+.content-box .form-box .input-box input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-weight: 400;
+  border: none;
+  font-size: 17px;
+  color: #323232;
+  background-color: #ecf2f2f7;
+  border-radius: 5px;
+  margin-top: px;
+}
+
+.content-box .form-box .input-box span {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #32324f;
+  font-weight: 500;
+}
+
+.content-box .form-box .input-box input::placeholder {
+  color: #a9adb6;
+}
+.content-box .form-box  .input-box .span-required {
+  display: none;
+  margin: 3px 0 0 1px ;
+  font-size: 15px ;
+  color: #e6363660;
+}
+.content-box .form-box .input-box input[type="submit"] {
+  background: #ffb606;
+  color: black;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.content-box .form-box .input-box input[type="submit"]:hover {
+  background: #b9891a;
+  color: black;
+}
+.remenber {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0px;
+
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+.checkbox {
+  font-size: 100px;
+}
+
