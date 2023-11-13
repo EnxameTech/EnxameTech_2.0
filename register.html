@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles/bootstrap4/bootstrap.min.css"
+    />
+    <link
+      href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="plugins/OwlCarousel2-2.2.1/owl.carousel.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="plugins/OwlCarousel2-2.2.1/animate.css"
+    />
+
+   
+
+    
+    <link rel="stylesheet" type="text/css" href="./styles/login.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/loading.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/register.css" />
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+
+      <!--Login-->
+      <div class="container-login">
+        <div class="img-box">
+          <img
+            src="./images/contact_background.jpg"
+            alt="imagem de comeia de abelha"
+          />
+        </div>
+        <!-- inputs-login -->
+        <div class="content-box">
+          <div class="form-box">
+            <h2>Faça seu Login</h2>
+
+            <div class="progress-bar">
+              <div class="progress" id="progress">
+              </div>
+              <div class="progress-content">
+                <div class="progress-step progress-step-active" ></div>
+                <div class="progress-step " ></div>
+                <div class="progress-step " ></div>
+                <div class="progress-step " ></div>
+                <div class="progress-step " ></div>
+              </div> 
+            </div>
+
+            <form action="" id="form" method="post">
+
+             <!-- step-1 -->
+              <div class="form-step  form-step-active row ">
+                  <div class="form-group col-12">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf"  class="inputs required" oninput="cpfValidate()">
+                    <span class="span-required">Campo obrigátorio</span>
+                  </div>
+                  <div class="form-group col-12">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome"  class="inputs required" oninput="nomeValidate()">
+                    <span class="span-required">Campo obrigátorio</span>
+                  </div>
+                  <div class="form-group col-12">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" id="sobrenome" name="sobrenome" class="inputs required" oninput="lastNameValidate()">
+                    <span class="span-required">Campo obrigátorio</span>
+                  </div>
+              
+                 
+                 
+    
+                <div class="row justify-content-center">
+                  <button href="#" type="submit" class=" col-6 btn-next" value="">Proximo</button>
+                </div>
+              
+              </div>
+
+             <!-- step-3 -->
+              <div class="row form-step ">
+                <div class="form-group col-12">
+                  <label for="dataNascimento">Data de Nascimento:</label>
+                  <input type="date" id="dataNascimento" name="dataNascimento"  class="inputs required">
+                  <span class="span-required">Campo obrigátorio</span>
+                </div>
+                <div class="form-group col-12">
+                  <label for="email">E-mail:</label>
+                  <input type="email" id="email" name="email"  class="inputs required" oninput="emailCheck()">
+                  <span class="span-required">Digite um e-mail valido</span>
+                </div>
+                <div class="form-group col-12">
+                  <label for="senha">Senha:</label>
+                  <input type="password" id="senha" name="senha" class="inputs required" oninput="password()">
+                  <span class="span-required">Minimo caracteres</span>
+                </div>
+
+                <div class="row justify-content-center">
+                  <button href="#" class="btn btn-prev col-3">Voltar</button>
+                  <button href="#" type="submit" class=" col-3 btn-next" value="">Proximo</button>
+                </div>
+              </div>
+                <!-- step -4 -->
+              <div class="row form-step ">
+                <div class="form-group col-12">
+                  <label for="genero">Gênero:</label>
+                  <select id="genero" name="genero" class="inputs required" oninput="sexo()">
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro" selected>Escolha uma opção</option>
+                    <option value="outro" >Outro</option>
+                </select>
+                  <span class="span-required">Campo obrigátorio</span>
+                </div>
+                <div class="form-group col-12">
+                  <label for="telefone">Telefone:</label>
+                  <input type="tel" id="telefone" name="telefone" class="inputs required" oninput="tel()">
+                  <span class="span-required">Campo obrigátorio</span>
+                </div>
+                <div class="row justify-content-center">
+                  <button href="#" class="btn btn-prev col-3">Voltar</button>
+                  <button href="#" type="submit" class=" col-3 btn-next" value="">Proximo</button>
+                </div>
+              </div>
+  
+             
+             
+           
+          <!-- step-5 -->
+              <div class="row form-step ">
+                <div class="row">
+                  <div class="form-group col-4">
+                    <label for="cpf">Cep:</label>
+                    <input type="text" id="cep" name="cep"  class="inputs required" o">
+                    <span class="span-required">Campo obrigátorio</span>
+                  </div>
+                  <div class="form-group col-4">
+                    <label for="nome">Rua:</label>
+                    <input type="text" id="rua" name="rua"  class="inputs required" >
+                    <span class="span-required">Campo obrigátorio</span>
+                  </div>
+                  <div class="form-group col-3">
+                    <label for="sobrenome">Numero</label>
+                    <input type="text" id="numero" name="numeor" class="inputs required">
+                    <span class="span-required">Campo obrigátorio</span>
+                  </div>
+                </div>
+                 <div class="row">
+                  <div class="form-group col-4">
+                    <label for="cpf">Bairro</label>
+                    <input type="text" id="bairro" name="bairro"  class="inputs required" >
+                    <span class="span-required">Campo obrigátorio</span>
+                  </div>
+                
+                  <div class="form-group col-4">
+                    <label for="cpf">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade"  class="inputs required" >
+                    <span class="span-required">Campo obrigátorio</span>
+                  </div>
+                
+                  <div class="form-group col-3">
+                    <label for="cpf">UF:</label>
+                    <input type="text" id="uf" name="uf"  class="inputs required" >
+                    <span class="span-required">Campo obrigátorio</span>
+                  </div>
+                 </div>
+  
+                <div class="row justify-content-center">
+                  <button href="#" class="btn btn-prev col-3">Voltar</button>
+                  <button href="#" type="submit" class=" col-3 btn-next" value="">Proximo</button>
+                 
+                </div>
+              </div>
+    
+              <div class="row form-step ">
+               
+               
+                  <div class="form-group col-12">
+                    <label for="cpf">Grupo Familiar</label>
+                    <input type="text" id="" name=""  class="inputs required" >
+                    <span class="span-required">grupo_familiar</span>
+                  </div>
+                
+                  <div class="form-group col-12">
+                    <label for="cpf">Renda Familiar</label>
+                    <input type="text" id="cidade" name="cidade"  class="inputs required" >
+                    <span class="span-required">renda_familiar</span>
+                  </div>
+              
+    
+                <div class="row justify-content-center">
+                  <button href="#" class="btn btn-prev col-3">Voltar</button>
+                  <input type="submit"  class="btn btn-prev col-3" value="Cadastrar">
+                </div>
+    
+        
+              
+                
+              </div> 
+              </div>
+    
+             
+              
+              <a class="voltar-link" href="./login.html">Voltar para a Login</a>
+            </form>
+
+             
+            
+            
+        </div>
+      </div>
+      
+    </div>
+    <script src="./js/input-validation-cadastar-aluno.js"></script>
+    <script src="./js/cadastra-alunos.js"></script>
+    <script src="./js/apiCep.js"></script>
+
+    <script src="./js/input-validation.js"></script>
+    <script src="./js/loading.js"></script>
+  </body>
+</html>

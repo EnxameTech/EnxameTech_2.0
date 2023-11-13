@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+  <head>
+    
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles/bootstrap4/bootstrap.min.css"
+    />
+    <link
+      href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="plugins/OwlCarousel2-2.2.1/owl.carousel.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="plugins/OwlCarousel2-2.2.1/animate.css"
+    />
+
+   
+
+    
+    <link rel="stylesheet" type="text/css" href="styles/login.css" />
+    <link rel="stylesheet" type="text/css" href="styles/loading.css" />
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+
+      <!--Login-->
+      <div class="container-login">
+        <div class="img-box">
+          <img
+            src="./images/contact_background.jpg"
+            alt="imagem de comeia de abelha"
+          />
+        </div>
+        <!-- inputs-login -->
+        <div class="content-box">
+          <div class="form-box">
+            <h2>login</h2>
+            <form id="loadim">
+              <div class="input-box">
+                <span>Login</span>
+                <input
+                  type="email"
+                  placeholder="@mail.com"
+                  class="required"
+                  oninput="emailCheck()"
+                />
+                <span class="span-required"
+                  >Isso não tem formato de e-mail</span
+                >
+              </div>
+              <div class="input-box">
+                <span>Senha</span>
+                <input
+                  type="password"
+                  placeholder="Digite sua senha"
+                  class="required"
+                  oninput=" emailValidate()"
+                />
+                <span class="span-required">Minimo 3 caractes</span>
+              </div>
+
+              <div class="remenber">
+                
+                <a href="#">Esqueceu sua senha</a>
+                <a href="./register.html">Faça seu Cadastro</a>
+              </div>
+              
+              
+            
+            </form>
+             <a href="./dashbord-home.html">
+            <div class="input-box " >                           
+              <input type="submit" value="Entrar" />
+            </div>
+            </a>
+             </div>
+
+        </div>
+      </div>
+      
+    </div>
+
+    <script src="./js/input-validation.js"></script>
+    <script src="./js/loading.js"></script>
+  </body>
+</html>
